@@ -80,7 +80,7 @@ function draw() {
     background('#0F2027');
 	textAlign(CENTER);
 	checkCustom();
-    
+    let t=0;
     if (a.length > 0) {
 
         if (flag[0] != 2) {
@@ -106,8 +106,10 @@ function draw() {
 			strokeWeight(1);
 			rect(x,(h - a[i] * factor - toolsHeight / 2.2 - smHeight / 20),(hRatio),(a[i] * factor));
 			x += hRatio;
+			textSize((x-(hRatio)/2-t)/2);
 			fill(255,255,0);
 			text(a[i],x-(hRatio)/2,(h - a[i] * factor - toolsHeight / 2.2 - smHeight / 20)-20);
+			t += x-(hRatio)/2;
 		}
 
         if (flag[0] != 2) {
