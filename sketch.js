@@ -11,7 +11,6 @@ var w = window.innerWidth,
 	isCustom1,isCustom2,
 	speed = 700,
 	counter = document.querySelector('#counter');
-	input = document.querySelectorAll('#navbarDropdown');
 
 const genBtn = document.querySelector('#genArr'),
     shuffleBtn = document.querySelectorAll('.shuffleBtn'),
@@ -77,9 +76,6 @@ function isSorted(arr) {
 	}
 	return temp;
 }
-function numText(){
-	text(input,x,(h - a[i] * factor - toolsHeight / 2.2 - smHeight / 20)+20);
-}
 function draw() {
     background('#0F2027');
 	textAlign(CENTER);
@@ -110,6 +106,8 @@ function draw() {
 			strokeWeight(1);
 			rect(x,(h - a[i] * factor - toolsHeight / 2.2 - smHeight / 20),(hRatio),(a[i] * factor));
 			x += hRatio;
+			fill(255,255,0);
+			text(a[i],x-(hRatio)/2,(h - a[i] * factor - toolsHeight / 2.2 - smHeight / 20)-20);
 		}
 
         if (flag[0] != 2) {
