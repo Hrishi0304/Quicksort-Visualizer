@@ -96,8 +96,6 @@ function draw() {
 		let mx2 = Math.max(...a);
 		let factor = mx1 / mx2;
 		let t=0;
-		let m;
-		let z=0;
 		for (let i = 0; i < a.length; ++i) {
 			if (flag[i] == 3) fill('#3b5bff');
 			else if (flag[i] == 2) fill('#38ef7d');
@@ -107,12 +105,10 @@ function draw() {
 			strokeWeight(1);
 			rect(x,(h - a[i] * factor - toolsHeight / 2.2 - smHeight / 20),(hRatio),(a[i] * factor));
 			x += hRatio;
-			m = (2*z+1)*(hRatio)/2;
 			fill(255,255,0);
-			textSize((m-t)/2);
-			text(a[i],m,(h - a[i] * factor - toolsHeight / 2.2 - smHeight / 20)-20);
-			t += m;
-			z++;
+			textSize((x-(hRatio)/2-t)/2);
+			text(a[i],x-(hRatio)/2,(h - a[i] * factor - toolsHeight / 2.2 - smHeight / 20)-20);
+			t += x- (hRatio)/2;
 		}
 
         if (flag[0] != 2) {
