@@ -115,7 +115,6 @@ function draw() {
             if (cur >= 0) flag[cur] = 0;
             if (it1 >= 0) flag[it1] = flag[it2] = 0;
         } 
-		numText();
     }
 	
 	for (let i = 0; i < 2; ++i) {
